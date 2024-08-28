@@ -8,6 +8,6 @@ public class Team {
     String teamName;
     Queue<Player> playingPlayers;
     List<Player> benchedPlayers;
-    BattingController battingController;
-    BowlingController bowlingController;
+    TeamBattingController battingController;
+    TeamBowlingController bowlingController;
 }
