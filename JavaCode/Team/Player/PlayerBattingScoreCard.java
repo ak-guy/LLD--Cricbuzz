@@ -4,11 +4,11 @@ import Team.Wicket.Wicket;
 
 public class PlayerBattingScoreCard {
     public int totalRuns;
-    int totalBallsPlayed;
-    int total4s;
-    int total6s;
-    int totalSingles;
-    int totalDoubles;
-    double strikeRate;
-    Wicket wicketDetails;
+    public int totalBallsPlayed;
+    public int total4s;
+    public int total6s;
+    public int totalSingles;
+    public int totalDoubles;
+    public double strikeRate;
+    public Wicket wicketDetails;
 }

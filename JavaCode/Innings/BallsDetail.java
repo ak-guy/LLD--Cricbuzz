@@ -10,11 +10,11 @@ import java.util.*;
 import Team.Wicket.Wicket;
 
 public class BallsDetail {
-    int ballNo;
-    BallType ballType;
-    RunType runType;
-    Player playedBy;
-    Player bowledBy;
+    public int ballNo;
+    public BallType ballType;
+    public RunType runType;
+    public Player playedBy;
+    public Player bowledBy;
     public Wicket wicket;
     List<ScoreUpdaterObserver> scoreUpdaterObserverList = new ArrayList<>();
 
@@ -34,14 +34,14 @@ public class BallsDetail {
     public void startBallDelivery(Team battingTeam, Team bowlingTeam, OverDetails overDetails) {
         playedBy = battingTeam.battingController.getStriker();
         bowledBy = overDetails.bowledBy;
-        ballType = getballType();
+        ballType = getDummyBallType();
 
         if (isWicketTaken()) {
             runType = RunType.ZERO;
             wicket = new Wicket(bowlingTeam.getCurrentBowler(), WicketType.BOLD, overDetails, this);
             battingTeam.battingController.setStriker(null);
         }else {
-            runType = getRunType();
+            runType = getDummyRunType();
             if (runType == RunType.SINGLE) {
                 battingTeam.battingController.setStriker(battingTeam.battingController.getNonStriker());
                 battingTeam.battingController.setNonStriker(playedBy);
@@ -51,7 +51,7 @@ public class BallsDetail {
         notifyObserver(this);
     }
 
-    private RunType getRunType() {
+    private RunType getDummyRunType() {
 
         double val = Math.random();
         if (val < 0.4) {
@@ -65,7 +65,7 @@ public class BallsDetail {
         }
     }
 
-    public BallType getballType(){
+    public BallType getDummyBallType(){
         double val = Math.random();
         if (val <= 0.1) {
             return BallType.NOBALL;
