@@ -8,8 +8,8 @@ public class Team {
     String teamName;
     Queue<Player> playingPlayers;
     List<Player> benchedPlayers;
-    TeamBattingController battingController;
-    TeamBowlingController bowlingController;
+    public TeamBattingController battingController;
+    public TeamBowlingController bowlingController;
     public boolean isWinner = false;
 
     public Team(String teamName, Queue<Player> playingPlayers, List<Player> benchedPlayers, List<Player> bowlersList) {
@@ -40,6 +40,10 @@ public class Team {
                 player.printBowlingScoreCard();
             }
         }
+    }
+
+    public Player getCurrentBowler() {
+        return bowlingController.getCurrentBowler();
     }
 
     public int getTotalRuns(){

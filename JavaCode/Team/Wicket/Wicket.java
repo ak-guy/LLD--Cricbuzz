@@ -10,4 +10,11 @@ public class Wicket {
     WicketType wicketType;
     OverDetails overDetails;
     BallsDetail ballsDetail;
+
+    public Wicket(Player wicketTakenBy, WicketType wicketType, OverDetails over, BallsDetail balls) {
+        this.wicketTakenBy = wicketTakenBy;
+        this.wicketType = wicketType;
+        this.overDetails = over;
+        this.ballsDetail = balls;
+    }
 }
