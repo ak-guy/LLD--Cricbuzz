@@ -4,5 +4,6 @@ import java.util.List;
 
 public class OverDetails {
     int overNumber;
-    List<BallsDetail> balls; 
+    List<BallsDetail> balls;
+
 }

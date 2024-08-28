@@ -1,7 +1,7 @@
 package Team.Player;
 
 public class PlayerBowlingScoreCard {
-    int oversDelivered;
+    public int oversDelivered;
     int runsGiven;
     int wicketsTaken;
     int noBallsCount;
